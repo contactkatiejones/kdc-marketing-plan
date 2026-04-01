@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDC Marketing Plan — Step-by-Step Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1612;
+    --orange: #e86c2f;
+    --orange-dark: #c45a20;
+    --orange-pale: #fdf0e8;
+    --steel: #2c3e50;
+    --steel-light: #3d5166;
+    --cream: #faf8f4;
+    --border: #e8e2d8;
+    --muted: #7a756e;
+    --green: #2a7d4f;
+    --green-pale: #eaf5ee;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--steel);
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::after {
+    content: 'MARKETING';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 8rem;
+    color: rgba(255,255,255,0.04);
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .header-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--orange);
+    margin-bottom: 0.5rem;
+  }
+
+  .header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.2rem;
+    color: white;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .header-sub {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    max-width: 540px;
+    line-height: 1.6;
+  }
+
+  .header-badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .badge-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--orange);
+  }
+
+  /* PROGRESS OVERVIEW */
+  .overview {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+  }
+
+  .overview-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .overview-label {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .overview-progress {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  .progress-bar-wrap {
+    flex: 1;
+    min-width: 200px;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--green);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+    width: 0%;
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* PHASE BLOCK */
+  .phase {
+    margin-bottom: 2.5rem;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .phase-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--orange);
+    line-height: 1;
+    min-width: 36px;
+  }
+
+  .phase-meta {}
+
+  .phase-timeline {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+
+  .phase-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    color: var(--steel);
+    line-height: 1;
+  }
+
+  .phase-desc {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 300px;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  /* TASK CARD */
+  .task {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .task:hover { box-shadow: 0 3px 16px rgba(0,0,0,0.07); }
+
+  .task.done {
+    border-color: #b7dfc8;
+    background: #f8fdfb;
+  }
+
+  .task-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .task-check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    background: var(--white);
+    cursor: pointer;
+    font-size: 12px;
+    color: transparent;
+  }
+
+  .task.done .task-check {
+    background: var(--green);
+    border-color: var(--green);
+    color: white;
+  }
+
+  .task-title-wrap { flex: 1; }
+
+  .task-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  .task.done .task-title {
+    color: var(--muted);
+    text-decoration: line-through;
+    text-decoration-color: #b7dfc8;
+  }
+
+  .task-subtitle {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .task-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .tag-free { background: var(--green-pale); color: #1a5c35; }
+  .tag-paid { background: var(--orange-pale); color: var(--orange-dark); }
+  .tag-weekly { background: #eef2ff; color: #3730a3; }
+  .tag-onetime { background: #f5f5f5; color: #555; }
+
+  .task-expand {
+    font-size: 18px;
+    color: var(--muted);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+    margin-left: 4px;
+  }
+
+  .task.open .task-expand { transform: rotate(180deg); }
+
+  /* STEPS */
+  .task-steps {
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 0;
+  }
+
+  .task.open .task-steps { display: block; }
+
+  .task.done .task-steps { border-top-color: #b7dfc8; }
+
+  .step {
+    display: flex;
+    gap: 14px;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .task.done .step { border-bottom-color: #b7dfc8; }
+
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--orange-pale);
+    color: var(--orange-dark);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .step-body {}
+
+  .step-action {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .step-detail {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .step-detail a {
+    color: var(--orange);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .step-tip {
+    margin-top: 8px;
+    background: #fffbf5;
+    border-left: 3px solid var(--orange);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    font-size: 12px;
+    color: #7a5c3a;
+    line-height: 1.5;
+  }
+
+  .step-tip strong { color: var(--orange-dark); }
+
+  /* COST ESTIMATE BOX */
+  .cost-box {
+    margin: 0.75rem 1.25rem 1rem;
+    background: var(--orange-pale);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--orange-dark);
+  }
+
+  .cost-icon { font-size: 16px; }
+  .cost-label { font-weight: 600; }
+  .cost-note { color: #a06030; margin-left: 4px; }
+
+  /* MONTHLY BUDGET SUMMARY */
+  .budget-summary {
+    background: var(--steel);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+    color: white;
+  }
+
+  .budget-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .budget-rows { display: flex; flex-direction: column; gap: 0; }
+
+  .budget-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 13px;
+  }
+
+  .budget-row:last-child { border-bottom: none; }
+  .budget-row-label { color: rgba(255,255,255,0.7); }
+  .budget-row-amt { font-weight: 600; color: white; }
+  .budget-row-note { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .budget-total { border-top: 1px solid rgba(255,255,255,0.2) !important; margin-top: 4px; padding-top: 12px !important; }
+  .budget-total .budget-row-label { color: white; font-weight: 600; font-size: 14px; }
+  .budget-total .budget-row-amt { color: var(--orange); font-size: 16px; }
+
+  /* DONE BANNER */
+  .done-banner {
+    display: none;
+    background: var(--green-pale);
+    border: 1px solid #b7dfc8;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .done-banner.show { display: block; }
+  .done-banner-title { font-weight: 600; color: var(--green); font-size: 16px; margin-bottom: 4px; }
+  .done-banner-sub { font-size: 13px; color: #2a6040; }
+
+  /* FOOTER */
+  .plan-footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* COMPETITOR SECTION */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .comp-tier {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  .comp-tier.threat { color: #b91c1c; }
+  .comp-tier.local { color: #b45309; }
+  .comp-tier.mobile { color: #1d4ed8; }
+
+  .comp-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .comp-tactic {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .comp-tactic strong { color: var(--ink); }
+
+  .advantage-box {
+    background: linear-gradient(135deg, #1a2b3c 0%, #2c3e50 100%);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .advantage-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .advantage-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .advantage-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+
+  .adv-bullet {
+    color: var(--orange);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* MESSAGING EXAMPLES */
+  .msg-block {
+    margin-top: 10px;
+    background: #f0f7ff;
+    border: 1px solid #c7dff7;
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+
+  .msg-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1e5fa8;
+    margin-bottom: 6px;
+  }
+
+  .msg-example {
+    font-size: 13px;
+    color: #1a2b3c;
+    line-height: 1.65;
+    font-style: italic;
+    border-left: 3px solid #378ADD;
+    padding-left: 10px;
+    margin-bottom: 6px;
+  }
+
+  .msg-example:last-child { margin-bottom: 0; }
+
+  .msg-note {
+    font-size: 11px;
+    color: #4a6fa5;
+    margin-top: 6px;
+    font-style: normal;
+  }
+
+
+    .header h1 { font-size: 2.2rem; }
+    .phase-desc { display: none; }
+    .overview-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="header-eyebrow">KDC Truck & Trailer Repair · Indianapolis, IN</div>
+    <h1>Your Marketing Plan</h1>
+    <p class="header-sub">A beginner-friendly, step-by-step guide to growing KDC's revenue — from getting found online to locking in recurring customers. Check off each task as you complete it.</p>
+    <div class="header-badges">
+      <div class="badge"><div class="badge-dot"></div> Est. 1995</div>
+      <div class="badge"><div class="badge-dot"></div> $500–$1,500/mo budget</div>
+      <div class="badge"><div class="badge-dot"></div> 5 Phases</div>
+      <div class="badge"><div class="badge-dot"></div> 20 Tasks</div>
+      <div class="badge"><div class="badge-dot"></div> Competitor intel included</div>
+    </div>
+  </div>
+</div>
+
+<div class="overview">
+  <div class="overview-inner">
+    <div class="overview-label">Overall progress</div>
+    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill"></div></div>
+    <div class="overview-progress" id="progress-label">0 of 20 tasks complete</div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div id="done-banner" class="done-banner">
+    <div class="done-banner-title">🎉 All tasks complete — great work!</div>
+    <div class="done-banner-sub">Keep checking your Google reviews and repeating the weekly tasks to maintain momentum.</div>
+  </div>
+
+  <!-- PHASE 0 — COMPETITOR LANDSCAPE -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num" style="color:#b91c1c;">00</div>
+      <div class="phase-meta">
+        <div class="phase-timeline">Read This First · Know Your Competition</div>
+        <div class="phase-title">Who You're Up Against</div>
+      </div>
+      <div class="phase-desc">Understanding competitors helps you know where to focus and what to say to win business.</div>
+    </div>
+
+    <div class="comp-grid">
+      <div class="comp-card">
+        <div class="comp-tier threat">⚠ Biggest Threat</div>
+        <div class="comp-name">Rush Truck Centers</div>
+        <div class="comp-tactic">National chain at 1325 W. Thompson Rd. Wins fleet accounts with a <strong>24/7 online repair-tracking portal</strong> (Service Connect™), same-day estimates, leasing options, and a massive parts inventory. Open Mon–Fri until midnight.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-tier threat">⚠ Biggest Threat</div>
+        <div class="comp-name">Wiers Fleet Service</div>
+        <div class="comp-tactic">In business since 1964. Positions itself as a long-term <strong>fleet "partner"</strong> — not just a repair shop. Technicians average 40+ hours of annual training. Covers the entire Indy metro with mobile service trucks. Heavy emphasis on fleet relationships.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-tier local">Local Competitor</div>
+        <div class="comp-name">Taylor's Truck & Trailer</div>
+        <div class="comp-tactic">Body shop since 1993 at 2402 W. Raymond St. Overlaps directly with KDC on body work and cargo box repair. Listed on FindTruckService.com — a fleet manager directory. No public Google review count — <strong>a gap KDC can exploit.</strong></div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-tier local">Local Competitor</div>
+        <div class="comp-name">A&G Truck Trailer Repair</div>
+        <div class="comp-tactic">Consistently ranked <strong>#1 on Yelp</strong> for trailer repair in Indianapolis. Their lead is built on review volume, not necessarily better service. Beating them here is achievable with a consistent review-gathering habit.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-tier mobile">Mobile-Only</div>
+        <div class="comp-name">Fast Track Truck & Trailer</div>
+        <div class="comp-tactic">Mobile-only, 24/7, advertising <strong>4.9-star Google reviews</strong> and 30–60 min response times. Winning emergency calls by being fast and visible online. No shop, no paint booth, no DOT inspection capability.</div>
+      </div>
+      <div class="comp-card">
+        <div class="comp-tier mobile">Mobile-Only</div>
+        <div class="comp-name">Midwest Truck & Trailer Repair</div>
+        <div class="comp-tactic">24/7 mobile roadside service across Indianapolis. Markets heavily on <strong>emergency availability</strong> and keyword SEO. No physical shop capabilities — purely mobile. Listed on multiple truck directories.</div>
+      </div>
+    </div>
+
+    <div class="advantage-box">
+      <div class="advantage-title">KDC's Unfair Advantages — Lead With These Every Time</div>
+      <ul class="advantage-list">
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">30 years in business (since 1995)</strong> — no mobile-only competitor or newer shop can match this. It signals trust and stability to fleet managers who need a long-term partner.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">Two 60' cross draft paint booths</strong> — no local independent competitor offers this. It enables full truck and trailer repaints and wreck restoration that smaller shops turn away.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">Full wreck repair capability</strong> — most mobile and small shops can't do structural collision work. This is a referral magnet from insurance companies and dealers.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">Sandblasting on-site</strong> — rare in Indianapolis. Enables proper surface prep for paint, welding, and coating work competitors outsource.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">3 mobile service trucks</strong> — you can compete with mobile-only shops on roadside service while also having a full shop. That combination is hard to beat.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">On-site estimates</strong> — Rush advertises this as a premium feature. KDC already does it. Say it louder.</li>
+        <li><span class="adv-bullet">→</span> <strong style="color:white;">J-Pro diagnostic system</strong> — professional-grade diagnostics that owner-operators and small fleets can't access elsewhere without going to a dealer.</li>
+      </ul>
+    </div>
+
+    <!-- Task 0a -->
+    <div class="task" id="task-0a">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Build your "why KDC" talking points — one sentence for each advantage</div>
+          <div class="task-subtitle">These become your phone script, your website copy, and your sales pitch — all in one</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Write down — in your own words — what makes KDC different from every other shop in Indianapolis</div>
+            <div class="step-detail">This doesn't need to be fancy. Just answer the question: "Why should a fleet manager choose KDC over Rush Truck Centers or Wiers?" Your answer to that question is your marketing. Keep it to 3–4 sentences max. Here are examples you can adapt:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example "Why KDC" pitch — phone or in-person</div>
+              <div class="msg-example">"We've been right here in Indianapolis since 1995 — 30 years of serving local fleets and owner-operators. Unlike the big dealer shops, we actually know your name and we get to your trucks fast. And we can handle things most shops in town can't — full wreck repairs, a 60-foot paint booth, sandblasting, and three mobile service trucks. One shop, everything your fleet needs."</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Write a shorter "elevator version" — one sentence you can say in 10 seconds</div>
+            <div class="step-detail">You'll use this when someone asks "what do you do?" at a truck stop, a Chamber of Commerce event, or anywhere else. Practice saying it out loud until it feels natural.</div>
+            <div class="msg-block">
+              <div class="msg-label">Example elevator pitch</div>
+              <div class="msg-example">"KDC Truck & Trailer — we've been the go-to full-service repair shop for Indianapolis fleets since 1995. Full wreck repair, paint booths, mobile service, DOT inspections — everything under one roof."</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Write it on a notecard and put it near the phone at the shop</div>
+            <div class="step-detail">Anyone who answers the phone at KDC should be able to say the same thing. When someone calls and asks "what all do you do?", having a consistent, confident answer builds trust immediately. A printed notecard near the phone makes this effortless.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 0b -->
+    <div class="task" id="task-0b">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">List KDC on FindTruckService.com — where fleet managers search for vendors</div>
+          <div class="task-subtitle">Taylor's and Wiers are already listed here. This is where fleet managers and dispatchers find shops.</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Go to findtruckservice.com and create a vendor listing</div>
+            <div class="step-detail">Click "Register" or "Add Your Business" and fill in KDC's complete info: name, address (2702 N. Colorado Ave., Indianapolis, IN 46218), phone (317-227-0533), hours, and every service you offer. This directory is used by fleet dispatchers who need to find a shop fast when a driver breaks down — being listed means they can find you.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">In your listing description, lead with your biggest differentiators</div>
+            <div class="step-detail">Don't just list services — explain why KDC stands out. Use language like:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example FindTruckService listing description</div>
+              <div class="msg-example">"KDC Truck & Trailer Repair has served Indianapolis fleets since 1995. Full-service shop handling everything from DOT inspections and PM programs to full wreck repairs, two 60' cross draft paint booths, sandblasting, and on-site estimates. Three fully equipped mobile service trucks serve both trucks and trailers at your location. Fleet accounts welcome with net-30 billing and priority scheduling."</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Also check if KDC is listed on Truckstop.com's service directory and DAT One</div>
+            <div class="step-detail">These are two other platforms used by carriers and dispatchers. Search for "KDC Truck" on both sites. If you're not listed, add your business the same way you did on FindTruckService. These are all free and take about 10 minutes each.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 0c -->
+    <div class="task" id="task-0c">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Set up a basic text-update system for customers while their truck is in the shop</div>
+          <div class="task-subtitle">Rush Truck Centers wins fleet loyalty with a fancy portal. KDC can do it with a $0 text message.</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-weekly">Every job</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Understand what customers want — and what Rush charges them for</div>
+            <div class="step-detail">Rush Truck Centers wins fleet accounts partly because their Service Connect portal lets managers see exactly where their truck is in the repair process — no need to call and ask. Most small shops make customers wonder. KDC can close this gap with a simple 3-text habit that costs nothing.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Send 3 standard texts for every repair job — check-in, diagnosis, and ready</div>
+            <div class="step-detail">Use these exact templates, adapted to each job:</div>
+            <div class="msg-block">
+              <div class="msg-label">Text 1 — When the truck arrives</div>
+              <div class="msg-example">"Hey [Name], this is KDC — we've got [truck/unit] checked in. We'll take a look today and get back to you with a diagnosis and estimate. Questions? Call or text (317) 227-0533."</div>
+              <div class="msg-label" style="margin-top:10px;">Text 2 — After diagnosis</div>
+              <div class="msg-example">"Hey [Name], KDC update on your [truck/unit]: [brief description of issue]. Estimated repair cost is $[amount] and we can have it done by [date/time]. Reply YES to approve or call us to discuss."</div>
+              <div class="msg-label" style="margin-top:10px;">Text 3 — When ready for pickup</div>
+              <div class="msg-example">"Good news — your [truck/unit] is ready at KDC! Come by anytime during business hours (Mon–Fri 7am–5pm). Total today is $[amount]. See you soon!"</div>
+              <div class="msg-note">Why this works: Customers at competing shops have to call repeatedly to get updates. This 3-text system makes KDC feel more professional than shops 10x your size — and it's a major reason fleet managers stay loyal once they experience it.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Make it a shop rule — every truck gets all 3 texts, no exceptions</div>
+            <div class="step-detail">Write it on a whiteboard or checklist in the shop: "3 texts per job." Assign one person to be responsible for sending them. This habit alone will generate word-of-mouth referrals — customers will tell other drivers "they actually keep you updated, which nobody else does."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 0d -->
+    <div class="task" id="task-0d">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Target wreck repair referrals from insurance adjusters and dealers</div>
+          <div class="task-subtitle">Your paint booths and sandblasting are rare capabilities — competitors can't match them. Use that.</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time push</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Start with these commercial truck insurance agencies — they're your best leads for wreck repair referrals</div>
+            <div class="step-detail">These agencies write commercial truck and fleet insurance policies in Indianapolis. When one of their policyholders has an accident, they need to recommend a repair shop. If KDC is on their list, the referrals are automatic. Call each one, ask for the agent or adjuster who handles commercial truck claims, and use the script in Step 2.</div>
+            <div class="msg-block">
+              <div class="msg-label">Commercial Truck Insurance — Call These First</div>
+              <div class="msg-example" style="font-style:normal;">
+                <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Continental Insurance Solutions</td><td style="padding:5px 0;color:#555;">(317) 434-3333 · Indianapolis · 4.8★ · 10+ yrs · Semi truck focus</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">IAL Insurance</td><td style="padding:5px 0;color:#555;">(317) 480-4111 · Indianapolis · 5.0★ · Commercial truck</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Truck Insurance Hub LLC</td><td style="padding:5px 0;color:#555;">(317) 536-5688 · Indianapolis · 4.6★ · Commercial trucking</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Full Coverage / Surety Bonds</td><td style="padding:5px 0;color:#555;">(317) 481-4333 · 5.0★ · 10+ yrs · Commercial truck broker</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Wexford Insurance</td><td style="padding:5px 0;color:#555;">(317) 942-0549 · Greenwood · 4.9★ · Auto liability truck</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Multiline Insurance Agency</td><td style="padding:5px 0;color:#555;">(317) 476-6141 · Indianapolis · 5.0★ · Truck insurance</td></tr>
+                  <tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Indiana Trucking Insurance</td><td style="padding:5px 0;color:#555;">(317) 408-2697 · Greenwood · 4.7★ · Commercial trucking</td></tr>
+                </table>
+              </div>
+              <div class="msg-note">Skip DMC Insurance (3.3★ — low reputation) and Acceptance Insurance (auto-focused, not commercial truck specialists).</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Call each agency and introduce KDC's wreck repair capabilities</div>
+            <div class="step-detail">Ask to speak with whoever handles commercial truck claims. Use this script:</div>
+            <div class="msg-block">
+              <div class="msg-label">Call script — insurance agency outreach</div>
+              <div class="msg-example">"Hi, my name is [name] and I'm the owner of KDC Truck & Trailer Repair — we've been in Indianapolis since 1995. I'm calling because we specialize in full commercial truck and trailer wreck repairs, and we have two 60-foot cross draft paint booths and on-site sandblasting — which is rare for an independent shop in Indy. When one of your policyholders has a commercial vehicle accident that needs body and paint work, we'd love to be on your recommended shop list. Would it be okay if I sent over our shop info and capabilities?"</div>
+              <div class="msg-note">Key phrase: "two 60-foot cross draft paint booths" — this specific detail signals serious professional capability. Most agents have never heard an independent shop say that and it gets their attention.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Also call these public adjusters — they handle claims after the fact and actively need repair shops</div>
+            <div class="step-detail">Public adjusters are hired by policyholders to maximize their claims. They need repair shops they can trust to do accurate estimates and quality work. Getting on their list is extremely valuable.</div>
+            <div class="msg-block">
+              <div class="msg-label">Public Adjusters — Call These</div>
+              <div class="msg-example" style="font-style:normal;">
+                <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Spartan Claims LLC</td><td style="padding:5px 0;color:#555;">(317) 939-3773 · Plainfield · 4.7★ · 10+ yrs — best option</td></tr>
+                  <tr><td style="padding:5px 8px 5px 0;font-weight:600;color:#1a2b3c;">Sill Public Adjusters</td><td style="padding:5px 0;color:#555;">(866) 884-2477 · Indianapolis · 4.9★ · Open 24 hrs</td></tr>
+                </table>
+              </div>
+              <div class="msg-note">Use the same script as above. Mention on-site estimates specifically — adjusters love shops that can document damage at the vehicle's location.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">Do the same outreach to 3–5 commercial truck dealerships for overflow work</div>
+            <div class="step-detail">Dealer service bays get backed up and regularly turn away body, paint, and sandblasting work. Call the service manager at Rush Truck Centers, Stoops Freightliner, and Truck Country Indy and say:</div>
+            <div class="msg-block">
+              <div class="msg-label">Call script — truck dealer overflow outreach</div>
+              <div class="msg-example">"Hey, this is [name] from KDC Truck & Trailer Repair — we're a full-service independent shop over on N. Colorado Ave., been here since 1995. We know your service bay gets busy and sometimes you have to turn away body, paint, or sandblasting work. We've got two 60-foot cross draft paint booths and we handle full wreck repairs — we'd love to be the shop you call when you've got overflow. No conflict, we don't sell trucks. Can I drop by and introduce myself sometime this week?"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">01</div>
+      <div class="phase-meta">
+        <div class="phase-timeline">Month 1 · Do These First</div>
+        <div class="phase-title">Get Found Online</div>
+      </div>
+      <div class="phase-desc">These are the highest-impact, lowest-cost steps. Do them before anything else.</div>
+    </div>
+
+    <!-- Task 1 -->
+    <div class="task" id="task-1">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Set up & optimize your Google Business Profile</div>
+          <div class="task-subtitle">The single most important thing you can do — it's how people find you when they search</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Go to google.com/business and sign in with a Google account</div>
+            <div class="step-detail">If you don't have a Google account, create one for free at gmail.com. Use a business email if you have one, or create one like <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cf7f8ffeef9ecfdf5eedcfbf1fdf5f0b2fff3f1">[email&#160;protected]</a>.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Search for "KDC Truck & Trailer Repair" — claim it if it exists, or create it if it doesn't</div>
+            <div class="step-detail">Google may already have a listing for your shop. If so, click "Claim this business." If not, click "Add your business." Fill in your exact name: KDC Truck & Trailer Repair.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Fill in every single field — do not skip anything</div>
+            <div class="step-detail">Business name, address (2702 N. Colorado Ave., Indianapolis, IN 46218), phone (317-227-0533), email (kdcoffice@kdcrepair.com), website URL, hours (Mon–Fri 7am–5pm, Sat by appt, Sun closed), year founded (1995), and a description. Use this as your description — it's written to rank in Google searches AND stand out from competitors:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example Google Business Profile description (copy & paste this)</div>
+              <div class="msg-example">"KDC Truck & Trailer Repair has served Indianapolis fleets and owner-operators since 1995 — over 30 years of full-service commercial truck repair. We handle everything under one roof: preventive maintenance, DOT inspections, full wreck repairs, two 60-foot cross draft paint booths, sandblasting, trailer repair, brakes, tires, and J-Pro computer diagnostics. Three fully equipped mobile service trucks serve both trucks and trailers at your location. Fleet accounts welcome — net-30 billing, priority scheduling, and on-site estimates available. Independent, local, and family-run. 2702 N. Colorado Ave., Indianapolis, IN. Call (317) 227-0533."</div>
+              <div class="msg-note">This naturally includes search keywords (DOT inspection Indianapolis, fleet truck repair, mobile service) while highlighting what Rush and Wiers can't say: independent, local, 30 years, paint booths.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">Add your services one by one</div>
+            <div class="step-detail">There's a "Services" section — add each one: Preventive Maintenance, DOT Inspections, Wreck Repair, Paint & Body, Sandblasting, Mobile Service, Brakes & Suspension, Trailer Repair, Tires, and Electrical.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-action">Upload at least 10 photos of your shop, equipment, and trucks you've worked on</div>
+            <div class="step-detail">Take photos of the exterior of the building, the paint booths, the service trucks, and any finished repair work. Photos make your listing look legitimate and help customers trust you. Use your phone — they don't need to be professional.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-action">Verify your listing by postcard or phone</div>
+            <div class="step-detail">Google will send a postcard to your address with a verification code. Enter that code in your dashboard. Until verified, your listing won't show up in searches. This takes about 5–7 days.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="task" id="task-2">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Collect your first 15 Google reviews</div>
+          <div class="task-subtitle">Reviews are the #1 thing that makes new customers choose you over a competitor</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time push</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Get your Google review link</div>
+            <div class="step-detail">In your Google Business Profile dashboard, click "Ask for reviews." Google will give you a short link like g.page/YourBusiness/review. Copy that link — you'll use it in every step below.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Write out a simple text message to send to past customers</div>
+            <div class="step-detail">Use this exact template — just fill in the name and paste your link:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example review request text</div>
+              <div class="msg-example">"Hey [Name], this is [your name] from KDC Truck & Trailer Repair. Hope you're keeping the wheels turning! We're working on growing our business and a Google review from you would mean a lot — it only takes 2 minutes. Here's the link: [paste link]. Thanks for your support!"</div>
+              <div class="msg-note">Why it works: It's personal, low pressure, and explains why you're asking. Avoid anything that sounds like a mass blast — people respond to texts that feel like they're from a person, not a business.</div>
+            </div>
+            <div class="step-tip"><strong>Who to text:</strong> Go through your phone contacts and invoices from the last 2 years. Text every customer you can. Aim for at least 30 people — expect about half to respond. A&G Truck Trailer leads Yelp largely because of review volume — KDC can beat them on Google with this one push.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Print a small card to hand to customers at pickup</div>
+            <div class="step-detail">A simple business-card-sized note that says: "Did we do a good job? Leave us a Google review! [your link]" Hand one to every customer when they pick up their truck. You can print these at Walgreens or FedEx Office for a few dollars.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">Respond to every review — good or bad</div>
+            <div class="step-detail">When someone leaves a review, reply within 24 hours. For good reviews: "Thanks so much [Name]! We appreciate your business and are glad we could help." For bad reviews: stay calm, apologize for their experience, and offer to make it right. This shows professionalism.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="task" id="task-3">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">List KDC on free commercial truck directories</div>
+          <div class="task-subtitle">These are websites where truck drivers and fleet managers specifically search for repair shops</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Go to TruckDown.com and create a free listing</div>
+            <div class="step-detail">Visit truckdown.com, click "Add Your Shop," and fill in KDC's info. This directory is used heavily by over-the-road truckers searching for roadside repair. Always use your exact name, address, and phone number.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">List on 411Trucks.com</div>
+            <div class="step-detail">Go to 411trucks.com and add your business. This is another directory used by truckers to find repair shops by location.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Make sure your info is consistent everywhere</div>
+            <div class="step-detail">Your business name, address, and phone number must be written exactly the same way on every listing, your website, and Google. Even small differences (like "Ave" vs "Avenue") can hurt your Google ranking. Use: KDC Truck & Trailer Repair · 2702 N. Colorado Ave. · Indianapolis, IN 46218 · (317) 227-0533.</div>
+            <div class="step-tip"><strong>Why this matters:</strong> Google compares your info across the internet. Consistency tells Google you're a real, established business — which pushes you higher in search results.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 4 -->
+    <div class="task" id="task-4">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Polish & launch your KDC website</div>
+          <div class="task-subtitle">Your site is already built — review it, make any final edits, then get it live with a real domain</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">~$12/yr</span><span class="tag tag-onetime">One-time</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Open your website file and review every page for accuracy</div>
+            <div class="step-detail">You have a complete 5-page website already built (index.html). Open it in your browser and click through all 5 pages — Home, Services, Fleet Accounts, About Us, and Contact. Check that every detail is correct: hours, phone number, address, services listed, and your email. If anything needs changing, ask Claude to update it.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Add real photos to the site before launching</div>
+            <div class="step-detail">The website currently uses text descriptions. Before going live, take 5–10 phone photos of: the outside of the shop, the two paint booths, one of the service trucks, and any finished repair or paint work you're proud of. Send them to Claude and ask to have them added to the website. Real photos dramatically increase trust with new visitors — especially fleet managers who've never heard of KDC.</div>
+            <div class="step-tip"><strong>Best shots to get:</strong> The paint booths are your #1 differentiator — make sure those are photographed well. A wide shot showing both booths side-by-side is ideal.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Buy a domain name at Namecheap.com (~$12/year)</div>
+            <div class="step-detail">Go to namecheap.com and search for these options in order of preference — buy the first one available: kdctruckrepair.com · kdcrepair.com · kdctrucks.com · kdcindy.com. Click "Add to Cart," create a free account, and check out. This is your permanent web address — customers will type this into Google to find you.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">Host the site for free on GitHub Pages and connect your domain</div>
+            <div class="step-detail">GitHub Pages is free hosting that works perfectly for your site. Create a free account at github.com, create a new public repository called "kdc-website," upload your index.html file, then go to Settings → Pages → select "main" branch and save. Your site will be live within 2 minutes. To connect your Namecheap domain, go to GitHub Pages Settings, enter your domain name in the "Custom domain" field, then follow Namecheap's DNS guide (search "Namecheap point domain to GitHub Pages" — it takes about 5 steps).</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <div class="step-action">Connect the contact form to your email using Formspree</div>
+            <div class="step-detail">Right now the service request form on the website doesn't send you anything. Fix it in 10 minutes: go to formspree.io, create a free account with kdcoffice@kdcrepair.com, click "New Form," copy the endpoint URL they give you (looks like formspree.io/f/XXXXXXXX), then paste that URL here in Claude and ask to connect it to the website form. After that, every form submission goes straight to your inbox.</div>
+            <div class="step-tip"><strong>Test it:</strong> After connecting Formspree, fill out your own contact form on the live site and make sure the email arrives at kdcoffice@kdcrepair.com. Don't skip this — a broken form means missed leads.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <div class="step-action">Add your website URL to your Google Business Profile, every directory listing, and your email signature</div>
+            <div class="step-detail">Once the site is live, go back to your Google Business Profile and add the URL. Update your TruckDown, 411Trucks, and FindTruckService listings too. Then add it to your email signature: "KDC Truck & Trailer Repair | (317) 227-0533 | [your website URL]." Every place your URL appears is another path for customers to find you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">02</div>
+      <div class="phase-meta">
+        <div class="phase-timeline">Month 2 · Build Recurring Revenue</div>
+        <div class="phase-title">Lock In Fleet Contracts</div>
+      </div>
+      <div class="phase-desc">Turn one-time customers into reliable monthly income with maintenance agreements.</div>
+    </div>
+
+    <!-- Task 5 -->
+    <div class="task" id="task-5">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Create your maintenance contract packages</div>
+          <div class="task-subtitle">Put together 2–3 simple options for fleet customers to sign up for ongoing service</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time setup</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Write out 3 simple package tiers on paper first</div>
+            <div class="step-detail">Starter (2–5 trucks): quarterly oil changes + annual DOT inspection. Standard (6–20 trucks): monthly PM + priority scheduling + net-30 billing. Enterprise (20+ trucks): fully custom — you quote it directly. Don't overthink the pricing — start with what feels fair and adjust after a few customers.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Create a one-page PDF or printout to hand to customers</div>
+            <div class="step-detail">Keep it simple: KDC logo at top, package names, what's included in each, and a line that says "Call (317) 227-0533 to get started." You can make this free at canva.com — search for "service brochure" template and edit it with your info.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Offer the contract to every existing customer this month</div>
+            <div class="step-detail">When any customer picks up their truck, hand them the one-pager and say: "We now offer maintenance plans for fleets — it saves you money and means your trucks always get priority. Want me to walk you through it?" You only need 3–5 signups to start generating predictable monthly income.</div>
+            <div class="step-tip"><strong>Your goal this month:</strong> Sign up 3 fleet accounts. Even 3 small accounts at $300–$500/month each = $900–$1,500 in guaranteed monthly revenue.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 6 -->
+    <div class="task" id="task-6">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Reach out to your top 20 past customers</div>
+          <div class="task-subtitle">Your best new contracts are hiding in your existing customer list</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time push</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Pull up your invoices or records and list your top 20 customers by how often they come in</div>
+            <div class="step-detail">Who brings in the most trucks? Who comes most frequently? Who has the most vehicles? These are your best contract prospects — they already trust you.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Call or text each one with a simple message</div>
+            <div class="step-detail">Try: "Hey [Name], this is [you] from KDC. We just started offering fleet maintenance plans that include priority scheduling and net-30 billing. Given how often you're in here, I think it could save you money. Can I shoot you the details?" Keep it casual — you already know these people.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Follow up once if they don't respond</div>
+            <div class="step-detail">After 5 days with no reply, send one follow-up: "Hey [Name], just wanted to make sure you got my message about the fleet maintenance plan. Happy to answer any questions." After that, move on — don't push.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 7 -->
+    <div class="task" id="task-7">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Set up a simple reminder system for return visits</div>
+          <div class="task-subtitle">Remind customers when their next oil change or DOT inspection is due — before they forget about you</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free to start</span><span class="tag tag-weekly">Ongoing</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Start tracking service dates in a simple spreadsheet</div>
+            <div class="step-detail">Open Google Sheets (free at sheets.google.com) and create columns for: Customer Name, Phone, Last Service Date, Service Type, Next Due Date. Fill in what you know from your records.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Every Friday, check who's due in the next 30 days and send them a text</div>
+            <div class="step-detail">Something like: "Hey [Name], this is KDC Truck & Trailer. Just a heads up — your truck's oil change / DOT inspection is coming due around [date]. Want to get on our schedule? Call or text us at (317) 227-0533." This takes about 15 minutes per week and brings customers back automatically.</div>
+            <div class="step-tip"><strong>Want to automate this later?</strong> Look into SimpleTexting.com (~$30/mo) — it lets you schedule texts in advance so you don't have to do it manually.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">03</div>
+      <div class="phase-meta">
+        <div class="phase-timeline">Month 2–3 · Bring In New Customers</div>
+        <div class="phase-title">Build Your Outreach Engine</div>
+      </div>
+      <div class="phase-desc">Proactively go find new fleet accounts instead of waiting for them to find you.</div>
+    </div>
+
+    <!-- Task 8 -->
+    <div class="task" id="task-8">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Set up a LinkedIn profile for KDC</div>
+          <div class="task-subtitle">LinkedIn is where fleet managers and logistics directors are — it's free and easy to use for outreach</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time setup</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Create a personal LinkedIn account at linkedin.com (if you don't have one)</div>
+            <div class="step-detail">Sign up with your name and email. Add a professional photo (even a clear phone photo is fine), your title (Owner, KDC Truck & Trailer Repair), and a short bio mentioning you've been serving Indianapolis since 1995.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Create a Company Page for KDC</div>
+            <div class="step-detail">On LinkedIn, click the grid icon → "Create a Company Page." Fill in your business name, website, industry (Automotive/Trucking), size, and a description of your services. This makes KDC look professional when you reach out to prospects.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Search for "fleet manager Indianapolis" and connect with 10 people this week</div>
+            <div class="step-detail">In the LinkedIn search bar, type "fleet manager Indianapolis." Send connection requests with a short note — keep it personal, not salesy:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example LinkedIn connection request note</div>
+              <div class="msg-example">"Hi [Name], I'm [your name], owner of KDC Truck & Trailer Repair — an independent full-service shop that's been in Indianapolis since 1995. We work with local fleets on everything from PM programs to full wreck repairs. Would love to connect."</div>
+            </div>
+            <div class="step-tip"><strong>Other searches to try:</strong> "transportation manager Indianapolis" · "logistics director Indianapolis" · "fleet supervisor Indiana"</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">After they connect, send a short follow-up message — lead with what competitors can't offer</div>
+            <div class="step-detail">Wait 1–2 days after they accept, then send this message:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example LinkedIn follow-up message</div>
+              <div class="msg-example">"Thanks for connecting, [Name]! Quick intro — KDC has been the go-to independent truck and trailer shop in Indianapolis since 1995. We do the full range: DOT inspections, PM programs with fleet billing, mobile service trucks that come to your yard, and full wreck repairs with two 60-foot paint booths — which is rare for an indy shop around here. If you ever need a reliable second shop or have body/paint work your current vendor can't handle, I'd love to help. No pressure — just wanted to put KDC on your radar."</div>
+              <div class="msg-note">Why "second shop" works: Fleet managers using Rush or Wiers aren't going to abandon them immediately. But positioning KDC as a reliable backup for overflow or specialty work (paint, wreck repair) gets you in the door. Once they try you, many switch.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 9 -->
+    <div class="task" id="task-9">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Cold outreach to 10 local businesses with fleets</div>
+          <div class="task-subtitle">Construction companies, bus companies, municipalities — they all have trucks that need maintenance</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time push</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Make a list of 10 local companies that run commercial vehicles</div>
+            <div class="step-detail">Google: "construction companies Indianapolis," "bus company Indianapolis," "trucking company Indianapolis," "waste management Indianapolis," "delivery company Indianapolis." Look at their websites to find a phone number or the name of an operations or fleet manager.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Call each one and ask for the person who manages their trucks</div>
+            <div class="step-detail">When you get them on the phone, use this script — it's built around what makes KDC different from Rush and Wiers:</div>
+            <div class="msg-block">
+              <div class="msg-label">Example cold call script — fleet manager outreach</div>
+              <div class="msg-example">"Hi, my name is [name] and I'm the owner of KDC Truck & Trailer Repair here in Indianapolis. We've been serving local fleets since 1995 — full-service shop, not a dealer chain. I'm calling because we offer something most shops in town can't: full wreck repairs, two 60-foot cross draft paint booths, sandblasting, and three mobile service trucks that come to your yard. We also do DOT inspections and fleet PM programs with net-30 billing. Do you have a shop you rely on right now, and would you be open to a conversation about how we might fit in?"</div>
+              <div class="msg-note">If they say they already use Rush or Wiers: "Totally understand — a lot of fleets use them. Where we tend to win is on body and paint work, wreck repairs, and faster turnaround on smaller jobs. Would you be open to having us as a backup shop?" Most fleet managers like having two vendors.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Offer a free on-site fleet inspection as a door-opener</div>
+            <div class="step-detail">"We'd love to come out and do a complimentary fleet inspection — no charge, no obligation. It gives us a chance to meet you and it gives you a second set of eyes on your vehicles." This is a very easy yes for them, and it gets you in front of their trucks.</div>
+            <div class="step-tip"><strong>Goal:</strong> Get 2–3 free fleet inspections booked from this outreach. Once you're on-site, they'll see your professionalism and you can pitch the maintenance contract in person.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 10 -->
+    <div class="task" id="task-10">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Partner with local truck dealers and freight brokers</div>
+          <div class="task-subtitle">These businesses interact with your customers daily — getting on their referral list costs nothing and keeps paying off</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time setup</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Call these Indianapolis-area truck dealers — ask for the service manager at each one</div>
+            <div class="step-detail">These are your best targets for overflow body, paint, and sandblasting work. Dealers get backed up constantly and refer customers to outside shops — but only shops they already know. Your goal on each call is simple: introduce KDC and ask to be their go-to for overflow. Skip Rush Truck Centers (they're a direct competitor).</div>
+            <div class="msg-block">
+              <div class="msg-label">Dealer Call List — Prioritized</div>
+              <div class="msg-example" style="font-style:normal;">
+                <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                  <tr style="background:#e8f4ff;"><td colspan="2" style="padding:5px 8px;font-weight:700;color:#1a2b3c;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;">Call First — Best Fit &amp; Highest Ratings</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;width:52%;">Kenworth of Indianapolis - East<br><span style="font-weight:400;color:#555;font-size:12px;">Palmer Trucks · 9704 E 30th St</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 620-8421<br>4.1★ · Open late · Semi trucks</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">M&amp;K Truck Centers, Indy South<br><span style="font-weight:400;color:#555;font-size:12px;">1401 Harding Ct</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 784-3740<br>3.7★ · High volume · Open late</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">Hare Truck Center<br><span style="font-weight:400;color:#555;font-size:12px;">Noblesville, IN</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 774-7574<br>4.6★ · Best rating on list</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">JX Truck Center – Indianapolis<br><span style="font-weight:400;color:#555;font-size:12px;">4255 S Harding St</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 788-0299<br>High volume location</td></tr>
+                  <tr style="background:#e8f4ff;"><td colspan="2" style="padding:5px 8px;font-weight:700;color:#1a2b3c;font-size:11px;text-transform:uppercase;letter-spacing:0.05em;">Also Call</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">McMahon Truck Centers (Volvo)<br><span style="font-weight:400;color:#555;font-size:12px;">1601 S High School Rd</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 244-6811<br>Open late · Volvo specialist</td></tr>
+                  <tr style="border-bottom:1px solid #c7dff7;"><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">Kenworth of Indianapolis - West<br><span style="font-weight:400;color:#555;font-size:12px;">Palmer Trucks · 2929 S Holt Rd</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 247-8421<br>High volume, open late</td></tr>
+                  <tr><td style="padding:6px 8px 6px 0;font-weight:600;color:#1a2b3c;">Fleet Truck Sales Inc.<br><span style="font-weight:400;color:#555;font-size:12px;">1726 W Thompson Rd</span></td><td style="padding:6px 0;color:#555;font-size:12px;">(317) 942-7051<br>4.9★ · Small, may need referrals</td></tr>
+                </table>
+              </div>
+              <div class="msg-note">Stoops Freightliner is open 24/7 and high-volume but has a 2.9★ rating — worth a call but may have internal service issues. Skip Rush Truck Centers entirely (direct competitor).</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Use this script when you reach the service manager</div>
+            <div class="step-detail">Keep it short and lead with what's in it for them — overflow they can't handle:</div>
+            <div class="msg-block">
+              <div class="msg-label">Call script — dealer service manager</div>
+              <div class="msg-example">"Hey, my name is [name] — I'm the owner of KDC Truck & Trailer Repair, we're a full-service independent shop over on N. Colorado Ave., been here since 1995. I'm reaching out because I know service bays get backed up, and sometimes you have body work, paint, or sandblasting jobs you have to turn away or wait-list. We've got two 60-foot cross draft paint booths and we do full wreck repairs in-house — we'd love to be the shop you call when you've got overflow. No conflict, we don't sell trucks. Could I stop by sometime this week to introduce myself?"</div>
+              <div class="msg-note">Always try to get a face-to-face meeting — service managers refer shops they've met in person, not ones who just called. Bring a one-page sheet with KDC's contact info and capabilities.</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Reach out to freight brokers — they refer carriers to repair shops constantly</div>
+            <div class="step-detail">Freight brokers coordinate shipments between shippers and carriers. When a carrier has a breakdown or needs service, brokers often recommend shops. Search Google for "freight broker Indianapolis" and "trucking logistics company Indianapolis." Call each one and ask for the operations manager. Use this script:</div>
+            <div class="msg-block">
+              <div class="msg-label">Call script — freight broker outreach</div>
+              <div class="msg-example">"Hi, my name is [name] from KDC Truck & Trailer Repair in Indianapolis — we've been serving local carriers and owner-operators since 1995. A lot of freight brokers keep a short list of reliable repair shops to recommend when a carrier has a breakdown or needs service before a run. We do everything from roadside mobile service to full wreck repairs and DOT inspections. Would it be okay if I sent you our shop info to keep on file?"</div>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-action">Leave flyers at nearby truck stops — owner-operators are a walk-in customer you're not reaching yet</div>
+            <div class="step-detail">Pin a simple flyer on the bulletin boards at Love's Travel Stop, Pilot Flying J, and TA truck stops near Indianapolis. Keep it simple: KDC name, phone number large, and 3 bullet points — "Mobile service trucks," "DOT inspections," "Full wreck repair &amp; paint." Check and replace flyers monthly.</div>
+            <div class="step-tip"><strong>Nearest truck stops to your shop:</strong> Search Google Maps for "truck stop near 2702 N Colorado Ave Indianapolis" — Love's and Pilot locations on I-465 are your best bets.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">04</div>
+      <div class="phase-meta">
+        <div class="phase-timeline">Month 3+ · Scale What's Working</div>
+        <div class="phase-title">Amplify & Retain</div>
+      </div>
+      <div class="phase-desc">Formalize referrals, run paid ads, and keep existing customers coming back.</div>
+    </div>
+
+    <!-- Task 11 -->
+    <div class="task" id="task-11">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Launch a simple referral program</div>
+          <div class="task-subtitle">Give happy customers a reason to tell their trucker friends about KDC</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-paid">Pay on success only</span><span class="tag tag-onetime">One-time setup</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Decide on your referral reward</div>
+            <div class="step-detail">A simple, generous offer works best: $75 credit toward their next service for every new paying customer they refer. You only pay when you actually get a new customer — so it costs you nothing upfront. Alternatively, offer a free oil change.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Print a simple referral card to hand to every customer</div>
+            <div class="step-detail">A business card that says: "Know someone who needs truck repair? Refer them to KDC and you'll get $75 off your next service when they come in. Have them mention your name." Print at Vistaprint.com (~$20 for 250 cards).</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Announce it to all your existing customers by text</div>
+            <div class="step-detail">Send a mass text: "Hey [Name], KDC just launched a referral program — refer a friend and get $75 off your next service. They just need to mention your name when they call. Thanks for your support!" Send this to everyone in your contact list who's been a customer.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 12 -->
+    <div class="task" id="task-12">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Set up Google Local Services Ads</div>
+          <div class="task-subtitle">Paid ads that put KDC at the very top of Google when someone searches for truck repair in Indianapolis</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-paid">~$300–$500/mo</span><span class="tag tag-weekly">Ongoing</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Go to ads.google.com/local-services-ads and apply</div>
+            <div class="step-detail">Google Local Services Ads (LSAs) are different from regular Google Ads — you only pay when someone actually calls you from the ad (called "pay per lead"). They also show a "Google Guaranteed" badge which builds trust. Fill out the application and pass their background check.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Set your weekly budget to $75–$125 to start</div>
+            <div class="step-detail">This is roughly $300–$500/month. You can increase it later once you see how many calls it generates. Google lets you pause or adjust the budget anytime.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Answer every call that comes from the ad immediately</div>
+            <div class="step-detail">When someone finds you through Google Ads, they're actively looking for help right now. If you miss the call, they'll call the next shop. Set your phone to ring loudly and answer as fast as possible during business hours.</div>
+            <div class="step-tip"><strong>Track it:</strong> In your Google Ads dashboard you can see exactly how many calls came from ads. After 30 days, divide your spend by the number of calls to see your "cost per lead." A good target for truck repair is under $30 per call.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 13 -->
+    <div class="task" id="task-13">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Ask for a review after every completed job</div>
+          <div class="task-subtitle">Make this a permanent habit — reviews compound over time and keep working for you forever</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-weekly">Every job</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">When a customer picks up their truck, say these words</div>
+            <div class="step-detail">"Hey, really glad we could get you taken care of. If you have a minute later, we'd love a Google review — it helps us a lot. I can text you the link right now." Then text them your Google review link on the spot while they're standing there. This dramatically increases how many people actually follow through.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Set a goal: 5 new Google reviews per month</div>
+            <div class="step-detail">Track how many reviews you get each month. Post the count somewhere visible in the shop so everyone on your team knows it's a priority. 5 reviews/month = 60 reviews/year — within a year you'll have more reviews than most competitors in Indianapolis.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 14 -->
+    <div class="task" id="task-14">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Post on your Google Business Profile once a week</div>
+          <div class="task-subtitle">Free posts that keep your listing fresh and show Google you're active</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-weekly">Weekly</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">In your Google Business dashboard, click "Add update" once a week</div>
+            <div class="step-detail">This is like a mini social media post that shows on your Google listing. Keep it short and simple. Take a photo of a truck you just finished working on, or write a quick tip.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Rotate between these simple post ideas</div>
+            <div class="step-detail">Week 1: Photo of a completed repair with a short caption ("Finished this wreck repair today — back on the road!"). Week 2: A tip ("Did you know DOT inspections are required annually? Book yours before the rush."). Week 3: A service highlight ("Our two 60' paint booths mean we can handle full trailer repaints — call for a quote."). Week 4: A behind-the-scenes photo of the shop or service trucks.</div>
+            <div class="step-tip"><strong>Takes 5 minutes per week</strong> and signals to Google that your business is active — which helps your search ranking.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 15 -->
+    <div class="task" id="task-15">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Connect the website contact form to your email</div>
+          <div class="task-subtitle">Right now form submissions on the website don't go anywhere — fix that so you don't miss leads</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-onetime">One-time setup</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">Go to formspree.io and create a free account</div>
+            <div class="step-detail">Formspree is a free service that receives your website form submissions and forwards them to your email. Sign up with your email (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe959a9d919898979d9bbe959a9d8c9b8e9f978cd09d9193">[email&#160;protected]</a>).</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Create a new form and copy the form endpoint URL they give you</div>
+            <div class="step-detail">In Formspree, click "New Form," give it a name like "KDC Service Request," and copy the endpoint URL that looks like: https://formspree.io/f/XXXXXXXX</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Send your index.html file and the Formspree URL to a developer or ask Claude to update it for you</div>
+            <div class="step-detail">The form in your website needs one line changed to point at your Formspree endpoint. You can paste your Formspree URL here in this chat and ask Claude to update the website file for you — it takes about 30 seconds.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task 16 -->
+    <div class="task" id="task-16">
+      <div class="task-header">
+        <div class="task-check">✓</div>
+        <div class="task-title-wrap">
+          <div class="task-title">Review your results every month and adjust</div>
+          <div class="task-subtitle">Marketing only works if you track what's happening and double down on what's driving customers</div>
+        </div>
+        <div class="task-tags"><span class="tag tag-free">Free</span><span class="tag tag-weekly">Monthly</span></div>
+        <div class="task-expand">▾</div>
+      </div>
+      <div class="task-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-action">On the first of each month, check these 4 numbers</div>
+            <div class="step-detail">1) How many new Google reviews did you get? (Goal: 5+). 2) How many calls came from Google Ads? (Check in ads.google.com). 3) How many new fleet contracts do you have? (Goal: grow by 1–2/month). 4) How many referrals came in? Write these down in a notebook or Google Sheet.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-action">Ask every new customer "How did you hear about us?"</div>
+            <div class="step-detail">This is the simplest marketing research you can do. Write down their answer each time. After 2–3 months you'll see a pattern — "Google," "a friend," "saw you on LinkedIn" — and you'll know where to put more energy.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-action">Put more effort into whatever is working, less into what isn't</div>
+            <div class="step-detail">If Google Ads is sending lots of calls → increase the budget. If LinkedIn outreach isn't getting responses → try cold calling instead. Marketing is trial and error — the key is paying attention and adjusting, not doing everything perfectly from the start.</div>
+            <div class="step-tip"><strong>Remember:</strong> You don't need to do everything at once. Start with Phase 1, get those done, then move to Phase 2. Doing a few things well beats doing everything halfway.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BUDGET SUMMARY -->
+  <div class="budget-summary">
+    <div class="budget-title">Monthly Budget Breakdown — $1,000/mo</div>
+    <div class="budget-rows">
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Google Local Services Ads</div>
+          <div class="budget-row-note">Highest-intent leads — people searching right now</div>
+        </div>
+        <div class="budget-row-amt">$500</div>
+      </div>
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Website hosting + domain name</div>
+          <div class="budget-row-note">GitHub Pages (free) + Namecheap domain (~$12/yr)</div>
+        </div>
+        <div class="budget-row-amt">$5</div>
+      </div>
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Text reminder service (SimpleTexting)</div>
+          <div class="budget-row-note">Automate service reminders — optional in month 1</div>
+        </div>
+        <div class="budget-row-amt">$30</div>
+      </div>
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Referral reward reserve</div>
+          <div class="budget-row-note">Only paid out when a referred customer actually comes in</div>
+        </div>
+        <div class="budget-row-amt">$150</div>
+      </div>
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Print materials (cards, flyers, referral cards)</div>
+          <div class="budget-row-note">Vistaprint, FedEx Office — one-time or quarterly</div>
+        </div>
+        <div class="budget-row-amt">$75</div>
+      </div>
+      <div class="budget-row">
+        <div>
+          <div class="budget-row-label">Misc (truck stop flyers, LinkedIn premium if needed)</div>
+          <div class="budget-row-note">Optional — only if outreach results are slow</div>
+        </div>
+        <div class="budget-row-amt">$50</div>
+      </div>
+      <div class="budget-row budget-total">
+        <div class="budget-row-label">Total monthly spend</div>
+        <div class="budget-row-amt">~$810/mo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan-footer">
+    KDC Truck & Trailer Repair · Indianapolis, IN · Est. 1995 · (317) 227-0533 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19a95929e9797989294b19a9592839481909883df929e9c">[email&#160;protected]</a>
+  </div>
+
+</div>
+
+<script>
+  const TOTAL = 20;
+
+  // Event delegation — attaches one listener to the whole document
+  // so no inline onclick needed (avoids CSP blocks in preview)
+  document.addEventListener('click', function(e) {
+    // Toggle open/close when clicking a task-header
+    const header = e.target.closest('.task-header');
+    if (header) {
+      const check = e.target.closest('.task-check');
+      if (!check) {
+        // Clicked header but not the check circle — toggle expand
+        const task = header.closest('.task');
+        if (task) task.classList.toggle('open');
+      }
+      return;
+    }
+
+    // Toggle done when clicking the check circle
+    const check = e.target.closest('.task-check');
+    if (check) {
+      e.stopPropagation();
+      const task = check.closest('.task');
+      if (task) {
+        task.classList.toggle('done');
+        updateProgress();
+      }
+    }
+  });
+
+  function updateProgress() {
+    const done = document.querySelectorAll('.task.done').length;
+    const pct = Math.round((done / TOTAL) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-label').textContent = done + ' of ' + TOTAL + ' tasks complete';
+    const banner = document.getElementById('done-banner');
+    if (done === TOTAL) {
+      banner.classList.add('show');
+    } else {
+      banner.classList.remove('show');
+    }
+  }
+</script>

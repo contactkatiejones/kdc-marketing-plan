@@ -4,151 +4,208 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KDC Marketing Plan — Step-by-Step Guide</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1612;
-    --orange: #e86c2f;
-    --orange-dark: #c45a20;
-    --orange-pale: #fdf0e8;
-    --steel: #2c3e50;
-    --steel-light: #3d5166;
-    --cream: #faf8f4;
-    --border: #e8e2d8;
-    --muted: #7a756e;
+    --navy: #1a1a1a;
+    --brick: #b5281c;
+    --brick-pale: #fdf0ee;
+    --cream: #f7f7f7;
+    --border: #dedede;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --muted: #666666;
     --green: #2a7d4f;
     --green-pale: #eaf5ee;
-    --white: #ffffff;
+    --light: #f0f0f0;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     background: var(--cream);
-    color: var(--ink);
+    color: var(--text);
     font-size: 15px;
     line-height: 1.6;
   }
 
-  /* HEADER */
-  .header {
-    background: var(--steel);
-    padding: 2.5rem 2rem 2rem;
+  h1, h2, h3, h4 {
+    font-family: 'Bitter', serif;
+    line-height: 1.2;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-badge {
+    width: 38px;
+    height: 38px;
+    background: white;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bitter', serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--navy);
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    color: white;
+    font-family: 'Bitter', serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    color: rgba(255,255,255,0.5);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .nav-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* HEADER HERO */
+  .plan-header {
+    background: var(--navy);
+    padding: 3rem 2rem 2.5rem;
     position: relative;
     overflow: hidden;
   }
 
-  .header::after {
-    content: 'MARKETING';
+  .plan-header::before {
+    content: '';
     position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 8rem;
-    color: rgba(255,255,255,0.04);
-    letter-spacing: 0.05em;
-    pointer-events: none;
-    white-space: nowrap;
+    inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 80px
+    );
   }
 
-  .header-inner {
-    max-width: 860px;
+  .plan-header-inner {
+    max-width: 900px;
     margin: 0 auto;
     position: relative;
   }
 
-  .header-eyebrow {
+  .plan-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.75);
     font-size: 11px;
     font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--orange);
-    margin-bottom: 0.5rem;
   }
 
-  .header h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3.2rem;
+  .plan-header h1 {
+    font-size: 2.5rem;
     color: white;
-    letter-spacing: 0.04em;
-    line-height: 1;
     margin-bottom: 0.75rem;
+    font-weight: 700;
   }
 
-  .header-sub {
+  .plan-header h1 span { color: #b5281c; }
+
+  .plan-header-sub {
     color: rgba(255,255,255,0.6);
     font-size: 14px;
-    max-width: 540px;
+    max-width: 580px;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
   }
 
-  .header-badges {
+  .plan-badges {
     display: flex;
-    gap: 10px;
-    margin-top: 1.25rem;
+    gap: 8px;
     flex-wrap: wrap;
   }
 
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(255,255,255,0.08);
+  .plan-badge {
+    background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.12);
-    color: rgba(255,255,255,0.75);
-    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    font-size: 11px;
     font-weight: 500;
     padding: 4px 12px;
     border-radius: 20px;
   }
 
-  .badge-dot {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--orange);
-  }
-
-  /* PROGRESS OVERVIEW */
-  .overview {
-    background: var(--white);
+  /* PROGRESS BAR */
+  .progress-bar-section {
+    background: white;
     border-bottom: 1px solid var(--border);
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
   }
 
-  .overview-inner {
-    max-width: 860px;
+  .progress-bar-inner {
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
   }
 
-  .overview-label {
+  .progress-label-text {
     font-size: 13px;
     color: var(--muted);
     font-weight: 500;
+    white-space: nowrap;
   }
 
-  .overview-progress {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--green);
-  }
-
-  .progress-bar-wrap {
+  .progress-track {
     flex: 1;
     min-width: 200px;
-    height: 6px;
+    height: 5px;
     background: var(--border);
     border-radius: 3px;
     overflow: hidden;
   }
 
-  .progress-bar-fill {
+  .progress-fill {
     height: 100%;
     background: var(--green);
     border-radius: 3px;
@@ -156,17 +213,36 @@
     width: 0%;
   }
 
-  /* MAIN LAYOUT */
+  .progress-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    white-space: nowrap;
+  }
+
+  /* MAIN */
   .main {
-    max-width: 860px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
   }
 
-  /* PHASE BLOCK */
-  .phase {
-    margin-bottom: 2.5rem;
+  /* DONE BANNER */
+  .done-banner {
+    display: none;
+    background: var(--green-pale);
+    border: 1px solid #b7dfc8;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
+  .done-banner.show { display: block; }
+  .done-banner-title { font-weight: 600; color: var(--green); font-size: 16px; margin-bottom: 4px; font-family: 'Bitter', serif; }
+  .done-banner-sub { font-size: 13px; color: #2a6040; }
+
+  /* PHASE */
+  .phase { margin-bottom: 2.5rem; }
 
   .phase-header {
     display: flex;
@@ -178,37 +254,38 @@
   }
 
   .phase-num {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bitter', serif;
     font-size: 2rem;
-    color: var(--orange);
+    color: var(--brick);
     line-height: 1;
     min-width: 36px;
   }
 
-  .phase-meta {}
+  .phase-num.zero { color: var(--navy); }
 
   .phase-timeline {
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     color: var(--muted);
     margin-bottom: 2px;
   }
 
   .phase-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 0.04em;
-    color: var(--steel);
+    font-family: 'Bitter', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+    color: var(--navy);
     line-height: 1;
+    font-weight: 700;
   }
 
   .phase-desc {
     margin-left: auto;
     font-size: 13px;
     color: var(--muted);
-    max-width: 300px;
+    max-width: 280px;
     text-align: right;
     line-height: 1.5;
   }
@@ -266,9 +343,9 @@
   .task-title {
     font-size: 15px;
     font-weight: 600;
-    color: var(--ink);
+    color: var(--text);
     margin-bottom: 2px;
-    transition: color 0.2s;
+    font-family: 'Bitter', serif;
   }
 
   .task.done .task-title {
@@ -277,16 +354,9 @@
     text-decoration-color: #b7dfc8;
   }
 
-  .task-subtitle {
-    font-size: 12px;
-    color: var(--muted);
-  }
+  .task-subtitle { font-size: 12px; color: var(--muted); }
 
-  .task-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
+  .task-tags { display: flex; gap: 6px; flex-wrap: wrap; }
 
   .tag {
     font-size: 10px;
@@ -298,29 +368,22 @@
   }
 
   .tag-free { background: var(--green-pale); color: #1a5c35; }
-  .tag-paid { background: var(--orange-pale); color: var(--orange-dark); }
+  .tag-paid { background: var(--brick-pale); color: #8f1e14; }
   .tag-weekly { background: #eef2ff; color: #3730a3; }
-  .tag-onetime { background: #f5f5f5; color: #555; }
+  .tag-onetime { background: var(--light); color: #555; }
 
   .task-expand {
     font-size: 18px;
     color: var(--muted);
     transition: transform 0.25s;
     flex-shrink: 0;
-    margin-left: 4px;
   }
 
   .task.open .task-expand { transform: rotate(180deg); }
 
   /* STEPS */
-  .task-steps {
-    display: none;
-    border-top: 1px solid var(--border);
-    padding: 0;
-  }
-
+  .task-steps { display: none; border-top: 1px solid var(--border); }
   .task.open .task-steps { display: block; }
-
   .task.done .task-steps { border-top-color: #b7dfc8; }
 
   .step {
@@ -331,15 +394,14 @@
   }
 
   .step:last-child { border-bottom: none; }
-
   .task.done .step { border-bottom-color: #b7dfc8; }
 
   .step-num {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: var(--orange-pale);
-    color: var(--orange-dark);
+    background: var(--navy);
+    color: white;
     font-size: 11px;
     font-weight: 700;
     display: flex;
@@ -349,116 +411,60 @@
     margin-top: 1px;
   }
 
-  .step-body {}
-
   .step-action {
     font-size: 14px;
     font-weight: 600;
-    color: var(--ink);
+    color: var(--text);
     margin-bottom: 3px;
+    font-family: 'Bitter', serif;
   }
 
-  .step-detail {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .step-detail a {
-    color: var(--orange);
-    text-decoration: underline;
-    cursor: pointer;
-  }
+  .step-detail { font-size: 13px; color: var(--muted); line-height: 1.6; }
 
   .step-tip {
     margin-top: 8px;
-    background: #fffbf5;
-    border-left: 3px solid var(--orange);
+    background: var(--light);
+    border-left: 3px solid var(--navy);
     padding: 8px 12px;
     border-radius: 0 6px 6px 0;
     font-size: 12px;
-    color: #7a5c3a;
+    color: #444;
     line-height: 1.5;
   }
 
-  .step-tip strong { color: var(--orange-dark); }
+  .step-tip strong { color: var(--navy); }
 
-  /* COST ESTIMATE BOX */
-  .cost-box {
-    margin: 0.75rem 1.25rem 1rem;
-    background: var(--orange-pale);
-    border-radius: 8px;
-    padding: 0.85rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  /* MESSAGING BLOCKS */
+  .msg-block {
+    margin-top: 10px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--navy);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+  }
+
+  .msg-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-family: 'Bitter', serif;
+  }
+
+  .msg-example {
     font-size: 13px;
-    color: var(--orange-dark);
+    color: var(--text);
+    line-height: 1.65;
+    font-style: italic;
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 6px;
   }
 
-  .cost-icon { font-size: 16px; }
-  .cost-label { font-weight: 600; }
-  .cost-note { color: #a06030; margin-left: 4px; }
-
-  /* MONTHLY BUDGET SUMMARY */
-  .budget-summary {
-    background: var(--steel);
-    border-radius: 12px;
-    padding: 1.75rem;
-    margin-bottom: 2.5rem;
-    color: white;
-  }
-
-  .budget-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4rem;
-    letter-spacing: 0.04em;
-    margin-bottom: 1rem;
-    color: white;
-  }
-
-  .budget-rows { display: flex; flex-direction: column; gap: 0; }
-
-  .budget-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 9px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    font-size: 13px;
-  }
-
-  .budget-row:last-child { border-bottom: none; }
-  .budget-row-label { color: rgba(255,255,255,0.7); }
-  .budget-row-amt { font-weight: 600; color: white; }
-  .budget-row-note { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-  .budget-total { border-top: 1px solid rgba(255,255,255,0.2) !important; margin-top: 4px; padding-top: 12px !important; }
-  .budget-total .budget-row-label { color: white; font-weight: 600; font-size: 14px; }
-  .budget-total .budget-row-amt { color: var(--orange); font-size: 16px; }
-
-  /* DONE BANNER */
-  .done-banner {
-    display: none;
-    background: var(--green-pale);
-    border: 1px solid #b7dfc8;
-    border-radius: 10px;
-    padding: 1.25rem 1.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .done-banner.show { display: block; }
-  .done-banner-title { font-weight: 600; color: var(--green); font-size: 16px; margin-bottom: 4px; }
-  .done-banner-sub { font-size: 13px; color: #2a6040; }
-
-  /* FOOTER */
-  .plan-footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem 0;
-    font-size: 12px;
-    color: var(--muted);
-    text-align: center;
-  }
+  .msg-note { font-size: 11px; color: var(--muted); margin-top: 6px; font-style: normal; }
 
   /* COMPETITOR SECTION */
   .comp-grid {
@@ -475,137 +481,160 @@
     padding: 1.1rem 1.25rem;
   }
 
-  .comp-tier {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 4px;
-  }
-
+  .comp-tier { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
   .comp-tier.threat { color: #b91c1c; }
   .comp-tier.local { color: #b45309; }
   .comp-tier.mobile { color: #1d4ed8; }
 
-  .comp-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
+  .comp-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; font-family: 'Bitter', serif; }
+  .comp-tactic { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .comp-tactic strong { color: var(--text); }
 
-  .comp-tactic {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
-
-  .comp-tactic strong { color: var(--ink); }
-
+  /* ADVANTAGE BOX */
   .advantage-box {
-    background: linear-gradient(135deg, #1a2b3c 0%, #2c3e50 100%);
+    background: var(--navy);
     border-radius: 10px;
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem;
     margin-bottom: 1.5rem;
   }
 
   .advantage-title {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bitter', serif;
     font-size: 1.1rem;
-    letter-spacing: 0.05em;
-    color: var(--orange);
-    margin-bottom: 0.75rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
 
-  .advantage-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .advantage-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 
   .advantage-list li {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 13px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.8);
     line-height: 1.5;
   }
 
-  .adv-bullet {
-    color: var(--orange);
+  .adv-bullet { color: #b5281c; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* BUDGET */
+  .budget-summary {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 2.5rem;
+    color: white;
+  }
+
+  .budget-title {
+    font-family: 'Bitter', serif;
+    font-size: 1.25rem;
     font-weight: 700;
-    flex-shrink: 0;
-    margin-top: 1px;
+    margin-bottom: 1rem;
+    color: white;
   }
 
-  /* MESSAGING EXAMPLES */
-  .msg-block {
-    margin-top: 10px;
-    background: #f0f7ff;
-    border: 1px solid #c7dff7;
-    border-radius: 8px;
-    padding: 10px 14px;
-  }
+  .budget-rows { display: flex; flex-direction: column; }
 
-  .msg-label {
-    font-size: 10px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #1e5fa8;
-    margin-bottom: 6px;
-  }
-
-  .msg-example {
+  .budget-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     font-size: 13px;
-    color: #1a2b3c;
-    line-height: 1.65;
-    font-style: italic;
-    border-left: 3px solid #378ADD;
-    padding-left: 10px;
-    margin-bottom: 6px;
   }
 
-  .msg-example:last-child { margin-bottom: 0; }
+  .budget-row:last-child { border-bottom: none; }
+  .budget-row-label { color: rgba(255,255,255,0.7); }
+  .budget-row-amt { font-weight: 600; color: white; }
+  .budget-row-note { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 2px; }
 
-  .msg-note {
+  .budget-total {
+    border-top: 1px solid rgba(255,255,255,0.2) !important;
+    margin-top: 4px;
+    padding-top: 12px !important;
+  }
+
+  .budget-total .budget-row-label { color: white; font-weight: 600; font-size: 14px; }
+  .budget-total .budget-row-amt { color: #b5281c; font-size: 16px; }
+
+  /* FOOTER */
+  .plan-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-top: 1rem;
+  }
+
+  /* CALL LIST TABLE */
+  .call-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  .call-table tr { border-bottom: 1px solid var(--border); }
+  .call-table tr:last-child { border-bottom: none; }
+  .call-table td { padding: 6px 8px 6px 0; color: var(--muted); }
+  .call-table td:first-child { font-weight: 600; color: var(--text); width: 52%; }
+  .call-table tr.call-group td {
+    padding: 5px 8px;
+    font-weight: 700;
     font-size: 11px;
-    color: #4a6fa5;
-    margin-top: 6px;
-    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--navy);
+    background: var(--light);
+    font-family: 'Bitter', serif;
   }
 
-
-    .header h1 { font-size: 2.2rem; }
+  @media (max-width: 600px) {
     .phase-desc { display: none; }
-    .overview-inner { flex-direction: column; align-items: flex-start; }
+    .progress-bar-inner { flex-direction: column; align-items: flex-start; }
+    .plan-header h1 { font-size: 1.8rem; }
   }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-inner">
-    <div class="header-eyebrow">KDC Truck & Trailer Repair · Indianapolis, IN</div>
-    <h1>Your Marketing Plan</h1>
-    <p class="header-sub">A beginner-friendly, step-by-step guide to growing KDC's revenue — from getting found online to locking in recurring customers. Check off each task as you complete it.</p>
-    <div class="header-badges">
-      <div class="badge"><div class="badge-dot"></div> Est. 1995</div>
-      <div class="badge"><div class="badge-dot"></div> $500–$1,500/mo budget</div>
-      <div class="badge"><div class="badge-dot"></div> 5 Phases</div>
-      <div class="badge"><div class="badge-dot"></div> 20 Tasks</div>
-      <div class="badge"><div class="badge-dot"></div> Competitor intel included</div>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="logo-badge">KDC</div>
+      <div>
+        <div class="logo-text">KDC Truck & Trailer Repair</div>
+        <div class="logo-sub">Indianapolis, Indiana · Est. 1995</div>
+      </div>
+    </div>
+    <div class="nav-label">Marketing Plan</div>
+  </div>
+</nav>
+
+<div class="plan-header">
+  <div class="plan-header-inner">
+    <div class="plan-eyebrow">KDC Truck & Trailer Repair · Indianapolis, IN</div>
+    <h1>Your <span>Marketing Plan</span></h1>
+    <p class="plan-header-sub">A beginner-friendly, step-by-step guide to growing KDC's revenue — from getting found online to locking in recurring customers. Check off each task as you complete it.</p>
+    <div class="plan-badges">
+      <span class="plan-badge">Est. 1995</span>
+      <span class="plan-badge">$500–$1,500/mo budget</span>
+      <span class="plan-badge">5 Phases</span>
+      <span class="plan-badge">20 Tasks</span>
+      <span class="plan-badge">Competitor intel included</span>
     </div>
   </div>
 </div>
 
-<div class="overview">
-  <div class="overview-inner">
-    <div class="overview-label">Overall progress</div>
-    <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progress-fill"></div></div>
-    <div class="overview-progress" id="progress-label">0 of 20 tasks complete</div>
+<div class="progress-bar-section">
+  <div class="progress-bar-inner">
+    <div class="progress-label-text">Overall progress</div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-count" id="progress-label">0 of 20 tasks complete</div>
   </div>
 </div>
 
@@ -908,7 +937,7 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-action">Go to google.com/business and sign in with a Google account</div>
-            <div class="step-detail">If you don't have a Google account, create one for free at gmail.com. Use a business email if you have one, or create one like <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9cf7f8ffeef9ecfdf5eedcfbf1fdf5f0b2fff3f1">[email&#160;protected]</a>.</div>
+            <div class="step-detail">If you don't have a Google account, create one for free at gmail.com. Use a business email if you have one, or create one like <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a5cec1c6d7c0d5c4ccd7e5c2c8c4ccc98bc6cac8">[email&#160;protected]</a>.</div>
           </div>
         </div>
         <div class="step">
@@ -922,7 +951,7 @@
           <div class="step-num">3</div>
           <div class="step-body">
             <div class="step-action">Fill in every single field — do not skip anything</div>
-            <div class="step-detail">Business name, address (2702 N. Colorado Ave., Indianapolis, IN 46218), phone (317-227-0533), email (kdcoffice@kdcrepair.com), website URL, hours (Mon–Fri 7am–5pm, Sat by appt, Sun closed), year founded (1995), and a description. Use this as your description — it's written to rank in Google searches AND stand out from competitors:</div>
+            <div class="step-detail">Business name, address (2702 N. Colorado Ave., Indianapolis, IN 46218), phone (317-227-0533), email (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb0bfb8b4bdbdb2b8be9bb0bfb8a9beabbab2a9f5b8b4b6">[email&#160;protected]</a>), website URL, hours (Mon–Fri 7am–5pm, Sat by appt, Sun closed), year founded (1995), and a description. Use this as your description — it's written to rank in Google searches AND stand out from competitors:</div>
             <div class="msg-block">
               <div class="msg-label">Example Google Business Profile description (copy & paste this)</div>
               <div class="msg-example">"KDC Truck & Trailer Repair has served Indianapolis fleets and owner-operators since 1995 — over 30 years of full-service commercial truck repair. We handle everything under one roof: preventive maintenance, DOT inspections, full wreck repairs, two 60-foot cross draft paint booths, sandblasting, trailer repair, brakes, tires, and J-Pro computer diagnostics. Three fully equipped mobile service trucks serve both trucks and trailers at your location. Fleet accounts welcome — net-30 billing, priority scheduling, and on-site estimates available. Independent, local, and family-run. 2702 N. Colorado Ave., Indianapolis, IN. Call (317) 227-0533."</div>
@@ -1085,8 +1114,8 @@
           <div class="step-num">5</div>
           <div class="step-body">
             <div class="step-action">Connect the contact form to your email using Formspree</div>
-            <div class="step-detail">Right now the service request form on the website doesn't send you anything. Fix it in 10 minutes: go to formspree.io, create a free account with kdcoffice@kdcrepair.com, click "New Form," copy the endpoint URL they give you (looks like formspree.io/f/XXXXXXXX), then paste that URL here in Claude and ask to connect it to the website form. After that, every form submission goes straight to your inbox.</div>
-            <div class="step-tip"><strong>Test it:</strong> After connecting Formspree, fill out your own contact form on the live site and make sure the email arrives at kdcoffice@kdcrepair.com. Don't skip this — a broken form means missed leads.</div>
+            <div class="step-detail">Right now the service request form on the website doesn't send you anything. Fix it in 10 minutes: go to formspree.io, create a free account with <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0dbd4d3dfd6d6d9d3d5f0dbd4d3c2d5c0d1d9c29ed3dfdd">[email&#160;protected]</a>, click "New Form," copy the endpoint URL they give you (looks like formspree.io/f/XXXXXXXX), then paste that URL here in Claude and ask to connect it to the website form. After that, every form submission goes straight to your inbox.</div>
+            <div class="step-tip"><strong>Test it:</strong> After connecting Formspree, fill out your own contact form on the live site and make sure the email arrives at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7bcb3b4b8b1b1beb4b297bcb3b4a5b2a7b6bea5f9b4b8ba">[email&#160;protected]</a>. Don't skip this — a broken form means missed leads.</div>
           </div>
         </div>
         <div class="step">
@@ -1554,7 +1583,7 @@
           <div class="step-num">1</div>
           <div class="step-body">
             <div class="step-action">Go to formspree.io and create a free account</div>
-            <div class="step-detail">Formspree is a free service that receives your website form submissions and forwards them to your email. Sign up with your email (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe959a9d919898979d9bbe959a9d8c9b8e9f978cd09d9193">[email&#160;protected]</a>).</div>
+            <div class="step-detail">Formspree is a free service that receives your website form submissions and forwards them to your email. Sign up with your email (<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="472c23242821212e2422072c2324352237262e356924282a">[email&#160;protected]</a>).</div>
           </div>
         </div>
         <div class="step">
@@ -1667,30 +1696,27 @@
   </div>
 
   <div class="plan-footer">
-    KDC Truck & Trailer Repair · Indianapolis, IN · Est. 1995 · (317) 227-0533 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19a95929e9797989294b19a9592839481909883df929e9c">[email&#160;protected]</a>
+    KDC Truck & Trailer Repair · Indianapolis, IN · Est. 1995 · (317) 227-0533 · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6c07080f030a0a050f092c07080f1e091c0d051e420f0301">[email&#160;protected]</a>
   </div>
 
+</div>
+<div class="plan-footer">
+  KDC Truck &amp; Trailer Repair · Indianapolis, IN · Est. 1995 · (317) 227-0533 · kdcoffice@kdcrepair.com
 </div>
 
 <script>
   const TOTAL = 20;
 
-  // Event delegation — attaches one listener to the whole document
-  // so no inline onclick needed (avoids CSP blocks in preview)
   document.addEventListener('click', function(e) {
-    // Toggle open/close when clicking a task-header
     const header = e.target.closest('.task-header');
     if (header) {
       const check = e.target.closest('.task-check');
       if (!check) {
-        // Clicked header but not the check circle — toggle expand
         const task = header.closest('.task');
         if (task) task.classList.toggle('open');
       }
       return;
     }
-
-    // Toggle done when clicking the check circle
     const check = e.target.closest('.task-check');
     if (check) {
       e.stopPropagation();
@@ -1703,11 +1729,11 @@
   });
 
   function updateProgress() {
-    const done = document.querySelectorAll('.task.done').length;
-    const pct = Math.round((done / TOTAL) * 100);
+    var done = document.querySelectorAll('.task.done').length;
+    var pct = Math.round((done / TOTAL) * 100);
     document.getElementById('progress-fill').style.width = pct + '%';
     document.getElementById('progress-label').textContent = done + ' of ' + TOTAL + ' tasks complete';
-    const banner = document.getElementById('done-banner');
+    var banner = document.getElementById('done-banner');
     if (done === TOTAL) {
       banner.classList.add('show');
     } else {
@@ -1715,3 +1741,5 @@
     }
   }
 </script>
+</body>
+</html>
